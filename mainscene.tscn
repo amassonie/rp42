@@ -16,29 +16,5 @@ region_rect = Rect2( 0, 0, 512, 300 )
 [node name="tile" parent="." instance=ExtResource( 2 )]
 position = Vector2( 32, 32 )
 
-[node name="tile2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 96, 32 )
-
-[node name="tile3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 160, 32 )
-
-[node name="tile4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 32, 160 )
-
-[node name="tile5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 416, 32 )
-
-[node name="tile6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 352, 32 )
-
-[node name="tile7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 288, 32 )
-
-[node name="tile8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 32, 96 )
-
-[node name="tile9" parent="." instance=ExtResource( 2 )]
-position = Vector2( 224, 32 )
-
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 168, 88 )
