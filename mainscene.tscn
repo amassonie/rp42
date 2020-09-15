@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprite/grass.png" type="Texture" id=3]
+[ext_resource path="res://servplayer.tscn" type="PackedScene" id=4]
 
 [node name="mainscene" type="Node2D"]
 
@@ -16,7 +17,10 @@ region_rect = Rect2( 0, 0, 512, 300 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="tile" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 32, 32 )
+position = Vector2( 538.488, 141.613 )
 
 [node name="player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 168, 88 )
+position = Vector2( 529.315, 306.615 )
+
+[node name="servPlayer" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 983.998, 73.0754 )
