@@ -217,13 +217,11 @@ hframes = 60
 frame = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 0, 18 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 current = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
