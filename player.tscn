@@ -5,8 +5,8 @@
 [ext_resource path="res://Interaction_range.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 8.06105
-height = 8.74426
+radius = 4.0
+height = 4.35
 
 [sub_resource type="Animation" id=24]
 resource_name = "IdleDown"
@@ -205,7 +205,7 @@ start_node = "Idle"
 [sub_resource type="AnimationNodeStateMachinePlayback" id=23]
 
 [sub_resource type="CapsuleShape2D" id=28]
-radius = 24.0
+radius = 13.0
 height = 0.0
 
 [node name="player" type="KinematicBody2D"]
@@ -213,13 +213,12 @@ collision_mask = 7
 script = ExtResource( 2 )
 
 [node name="sprite" type="Sprite" parent="."]
-scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 hframes = 60
 frame = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 18 )
+position = Vector2( 0, 9 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
@@ -248,7 +247,7 @@ parameters/Run/blend_position = Vector2( 0, 0 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction_range"]
-position = Vector2( 0, 8 )
+position = Vector2( 0, 4 )
 shape = SubResource( 28 )
 [connection signal="body_entered" from="Interaction_range" to="Interaction_range" method="_on_Interaction_range_body_entered"]
 [connection signal="body_exited" from="Interaction_range" to="Interaction_range" method="_on_Interaction_range_body_exited"]

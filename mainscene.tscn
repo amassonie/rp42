@@ -9,7 +9,7 @@
 [node name="mainscene" type="Node2D"]
 
 [node name="background" type="Sprite" parent="."]
-position = Vector2( 512, 299.056 )
+position = Vector2( 512.334, 299.056 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 region_enabled = true
@@ -18,18 +18,22 @@ region_rect = Rect2( 0, 0, 512, 300 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="tile" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 538.488, 141.613 )
+position = Vector2( 538.988, 146.613 )
+scale = Vector2( 2, 2 )
 
 [node name="movable_object" type="YSort" parent="YSort"]
 
 [node name="movable_object" parent="YSort/movable_object" instance=ExtResource( 5 )]
 position = Vector2( 366.637, 143.631 )
+scale = Vector2( 2, 2 )
 
 [node name="movable_object2" parent="YSort/movable_object" instance=ExtResource( 5 )]
 position = Vector2( 218.814, 287.788 )
 
 [node name="player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 529.315, 306.615 )
+position = Vector2( 536, 288 )
+scale = Vector2( 2, 2 )
 
 [node name="servPlayer" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 983.998, 73.0754 )
+scale = Vector2( 2, 2 )

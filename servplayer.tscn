@@ -4,8 +4,8 @@
 [ext_resource path="res://servplayer.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 8.06105
-height = 8.74426
+radius = 4.0
+height = 4.35
 
 [sub_resource type="Animation" id=2]
 resource_name = "IdleDown"
@@ -208,13 +208,12 @@ collision_mask = 7
 script = ExtResource( 2 )
 
 [node name="sprite" type="Sprite" parent="."]
-scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 hframes = 60
 frame = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 18 )
+position = Vector2( 0, 9 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
