@@ -25,11 +25,10 @@ func _physics_process(delta):
 		animationState.travel("Run")
 	else:
 		animationState.travel("Idle")
-	move_and_slide(dest_vector * min(MAX_SPEED, (dest - servPlayer.position).length() / delta))
+	#move_and_slide(dest_vector * min(MAX_SPEED, (dest - servPlayer.position).length() / delta))
 	
 	if ((dest - servPlayer.position).length()) == 0:
 		dest = get_node("../player").position
-	print((dest - servPlayer.position).length())
 
 func _ready():
 	set_dest(150, 20)
