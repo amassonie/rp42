@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/carre_rouge.png-f08e6fc5ec4c95cb15311e595c76956b.stex"
+path="res://.import/tree.png-7a90d994c88db67d9debad65bc92e4aa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/carre_rouge.png"
-dest_files=[ "res://.import/carre_rouge.png-f08e6fc5ec4c95cb15311e595c76956b.stex" ]
+source_file="res://Sprite/tree.png"
+dest_files=[ "res://.import/tree.png-7a90d994c88db67d9debad65bc92e4aa.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

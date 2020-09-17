@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bulle.png-e75c5dd6b713021b788d93c97abeb275.stex"
+path="res://.import/woodcase.png-ff54b5172d98ad10e16c325c67fe759b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/bulle.png"
-dest_files=[ "res://.import/bulle.png-e75c5dd6b713021b788d93c97abeb275.stex" ]
+source_file="res://Sprite/woodcase.png"
+dest_files=[ "res://.import/woodcase.png-ff54b5172d98ad10e16c325c67fe759b.stex" ]
 
 [params]
 
