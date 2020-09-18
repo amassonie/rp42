@@ -114,7 +114,7 @@ position = Vector2( -803.908, 807.644 )
 scale = Vector2( 2, 2 )
 
 [node name="tree_h3" parent="YSort/unmovable_object" instance=ExtResource( 8 )]
-position = Vector2( -260.002, 995.653 )
+position = Vector2( -302.766, 838.855 )
 scale = Vector2( 2, 2 )
 
 [node name="tree_h4" parent="YSort/unmovable_object" instance=ExtResource( 8 )]

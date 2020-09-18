@@ -20,11 +20,11 @@ func _physics_process(delta):
 	dest_vector = (dest - servPlayer.position)
 	dest_vector = dest_vector.normalized()
 	if dest_vector != Vector2.ZERO:
-		animationTree.set("parameters/Idle/blend_position", dest_vector)
-		animationTree.set("parameters/Run/blend_position", dest_vector)
-		animationState.travel("Run")
+		animationTree.set("parameters/idle/blend_position", dest_vector)
+		animationTree.set("parameters/walk/blend_position", dest_vector)
+		animationState.travel("walk")
 	else:
-		animationState.travel("Idle")
+		animationState.travel("idle")
 	#move_and_slide(dest_vector * min(MAX_SPEED, (dest - servPlayer.position).length() / delta))
 	
 	#if ((dest - servPlayer.position).length()) == 0:

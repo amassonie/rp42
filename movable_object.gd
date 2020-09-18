@@ -28,10 +28,10 @@ func is_in_range(body, value):
 func move_obj():
 	var orientation = player.input_vector.angle() * 180 / PI
 	if orientation >= -46 && orientation <= 46 && Input.is_action_pressed("move_right"):
-		obj.position.x = player.position.x + player_size.x / 5.7 + obj_size.x / 2
+		obj.position.x = player.position.x + player_size.x / 2 + obj_size.x / 2
 		obj.position.y = player.position.y
 	elif orientation >= 134 || orientation <= -134:
-		obj.position.x = player.position.x - player_size.x / 5.7 - obj_size.x / 2
+		obj.position.x = player.position.x - player_size.x / 2 - obj_size.x / 2
 		obj.position.y = player.position.y
 	elif orientation > 45 && orientation < 135:
 		obj.position.x = player.position.x 
