@@ -29,4 +29,4 @@ func set_maxspeed(value):
 	MAX_SPEED += value
 
 func _ready():
-	set_maxspeed(300)
+	set_maxspeed(450)

@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var MAX_SPEED = 250
+var MAX_SPEED = 450
 
 var dest_vector = Vector2.ZERO    
 
