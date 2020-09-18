@@ -6,6 +6,7 @@ var is_grabbed = 0
 var timer = 0
 var player_size = Vector2.ZERO
 var obj_size = Vector2.ZERO
+var save_pos = Vector2.ZERO
 
 onready var obj = get_node(".")
 var player = null
@@ -35,6 +36,7 @@ func move_obj():
 	elif orientation > 45 && orientation < 135:
 		obj.position.x = player.position.x 
 		obj.position.y = player.position.y + player_size.y / 5.7 + obj_size.y / 2 + 7 * player.scale.y
+		save_pos = Vector2(player.position.x, player.position.y + player_size.y / 5.7 + obj_size.y / 2 + 7 * player.scale.y)
 	elif orientation > -135 && orientation < -45:
 		obj.position.x = player.position.x 
 		obj.position.y = player.position.y - player_size.y / 5.7 - obj_size.y / 2 + 7 * player.scale.y

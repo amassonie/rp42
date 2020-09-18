@@ -7,19 +7,15 @@ var timerk = 0
 var grabbed_body = null
 var kill_body = null
 
-var player_size = Vector2.ZERO
-var obj
-var obj_size
-
 onready var player = get_node("..")
 
 func set_grab(value):
 	is_grab = value
 
 func _on_Interaction_range_body_entered(body):
-	if body.get_parent().get_name() == "movable_object" && is_grab == 0:
+	if body.get_parent().get_name() == "movable_object" && is_grab == 0 && body.is_in_range == 0:
 		body.is_in_range(player, 1)
-	elif body.get_parent().get_name() == "servPlayer":
+	elif body.get_parent().get_name() == "servPlayer" && body.name != "player":
 		is_killable = 1
 		kill_body = get_node(body.get_path())
 

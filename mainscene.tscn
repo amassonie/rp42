@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tile.tscn" type="PackedScene" id=2]
@@ -8,13 +8,50 @@
 [ext_resource path="res://launchpad.tscn" type="PackedScene" id=6]
 [ext_resource path="res://tree.tscn" type="PackedScene" id=7]
 [ext_resource path="res://tree_h.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sprite/grass_red.png" type="Texture" id=9]
+[ext_resource path="res://Sprite/grass_snow.png" type="Texture" id=10]
+[ext_resource path="res://Sprite/grass_blue.png" type="Texture" id=11]
+[ext_resource path="res://algue.tscn" type="PackedScene" id=12]
+[ext_resource path="res://red_tree.tscn" type="PackedScene" id=13]
 
 [node name="mainscene" type="Node2D"]
 
-[node name="background" type="Sprite" parent="."]
+[node name="grass" type="Sprite" parent="."]
+position = Vector2( 1256, 1248 )
+scale = Vector2( 0.5024, 0.4992 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 5000, 5000 )
+
+[node name="grass_snow" type="Sprite" parent="."]
+position = Vector2( -1256, 1248 )
+scale = Vector2( 0.5024, 0.4992 )
+texture = ExtResource( 10 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 5000, 5000 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="grass_burned" type="Sprite" parent="."]
+position = Vector2( -1256, -1252 )
+scale = Vector2( 0.5024, 0.5008 )
+texture = ExtResource( 9 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 5000, 5000 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="grass_water" type="Sprite" parent="."]
+position = Vector2( 1256, -1252 )
+scale = Vector2( 0.5024, 0.5008 )
+texture = ExtResource( 11 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 5000, 5000 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="launchpad" parent="." instance=ExtResource( 6 )]
 scale = Vector2( 2, 2 )
@@ -28,7 +65,7 @@ position = Vector2( 2008.08, 1763.06 )
 scale = Vector2( 2, 2 )
 
 [node name="tree2" parent="YSort/unmovable_object" instance=ExtResource( 7 )]
-position = Vector2( 933.286, 847.641 )
+position = Vector2( 1096.92, 541.218 )
 scale = Vector2( 2, 2 )
 
 [node name="tree3" parent="YSort/unmovable_object" instance=ExtResource( 7 )]
@@ -44,7 +81,7 @@ position = Vector2( 1699.19, 968.982 )
 scale = Vector2( 2, 2 )
 
 [node name="tree6" parent="YSort/unmovable_object" instance=ExtResource( 7 )]
-position = Vector2( 1460.03, 638.847 )
+position = Vector2( 418.688, 870.523 )
 scale = Vector2( 2, 2 )
 
 [node name="tree7" parent="YSort/unmovable_object" instance=ExtResource( 7 )]
@@ -64,6 +101,7 @@ position = Vector2( 995.561, 2175.4 )
 scale = Vector2( 2, 2 )
 
 [node name="tile" parent="YSort/unmovable_object" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( 213.571, 200.585 )
 scale = Vector2( 2, 2 )
 
@@ -84,15 +122,15 @@ position = Vector2( -2221.73, 1852.19 )
 scale = Vector2( 2, 2 )
 
 [node name="tree_h5" parent="YSort/unmovable_object" instance=ExtResource( 8 )]
-position = Vector2( -688.054, 1028.48 )
+position = Vector2( -593.077, 685.075 )
 scale = Vector2( 2, 2 )
 
 [node name="tree_h6" parent="YSort/unmovable_object" instance=ExtResource( 8 )]
-position = Vector2( -1406.73, 609.356 )
+position = Vector2( -1725.55, 802.916 )
 scale = Vector2( 2, 2 )
 
 [node name="tree_h7" parent="YSort/unmovable_object" instance=ExtResource( 8 )]
-position = Vector2( -1748.49, 992.294 )
+position = Vector2( -1594.19, 290.759 )
 scale = Vector2( 2, 2 )
 
 [node name="tree_h8" parent="YSort/unmovable_object" instance=ExtResource( 8 )]
@@ -107,25 +145,168 @@ scale = Vector2( 2, 2 )
 position = Vector2( -574.061, 1603.46 )
 scale = Vector2( 2, 2 )
 
+[node name="algue" parent="YSort/unmovable_object" instance=ExtResource( 12 )]
+position = Vector2( 445.54, -354.224 )
+scale = Vector2( 2, 2 )
+
+[node name="algue2" parent="YSort/unmovable_object" instance=ExtResource( 12 )]
+position = Vector2( 1124.08, -907.983 )
+scale = Vector2( 2, 2 )
+
+[node name="algue3" parent="YSort/unmovable_object" instance=ExtResource( 12 )]
+position = Vector2( 259.843, -1073.71 )
+scale = Vector2( 2, 2 )
+
+[node name="algue4" parent="YSort/unmovable_object" instance=ExtResource( 12 )]
+position = Vector2( 1064.12, -424.901 )
+scale = Vector2( 2, 2 )
+
+[node name="algue5" parent="YSort/unmovable_object" instance=ExtResource( 12 )]
+position = Vector2( 1889.77, -444.901 )
+scale = Vector2( 2, 2 )
+
+[node name="algue6" parent="YSort/unmovable_object" instance=ExtResource( 12 )]
+position = Vector2( 1628.12, -1232.9 )
+scale = Vector2( 2, 2 )
+
+[node name="algue7" parent="YSort/unmovable_object" instance=ExtResource( 12 )]
+position = Vector2( 2292.12, -1288.9 )
+scale = Vector2( 2, 2 )
+
+[node name="algue8" parent="YSort/unmovable_object" instance=ExtResource( 12 )]
+position = Vector2( 1892.12, -1684.9 )
+scale = Vector2( 2, 2 )
+
+[node name="algue9" parent="YSort/unmovable_object" instance=ExtResource( 12 )]
+position = Vector2( 396.116, -1740.9 )
+scale = Vector2( 2, 2 )
+
+[node name="algue10" parent="YSort/unmovable_object" instance=ExtResource( 12 )]
+position = Vector2( 1128.12, -1864.9 )
+scale = Vector2( 2, 2 )
+
+[node name="algue11" parent="YSort/unmovable_object" instance=ExtResource( 12 )]
+position = Vector2( 1880.12, -2156.9 )
+scale = Vector2( 2, 2 )
+
+[node name="red_tree" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -470.695, -875.143 )
+
+[node name="red_tree2" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -1816.16, -370.693 )
+
+[node name="red_tree3" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -2073.92, -1132.03 )
+
+[node name="red_tree4" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -937.683, -1552.55 )
+
+[node name="red_tree5" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -538.11, -2194.72 )
+
+[node name="red_tree6" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -2136.4, -2299.37 )
+
+[node name="red_tree7" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -2217.27, -1500.23 )
+
+[node name="red_tree8" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -2141.16, -701.079 )
+
+[node name="red_tree9" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -890.116, -410.912 )
+
+[node name="red_tree10" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -1636.94, -1609.63 )
+
+[node name="red_tree11" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -1382.67, -1215.51 )
+
+[node name="red_tree12" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -1297.91, -181.477 )
+
+[node name="red_tree13" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -1043.64, -821.392 )
+
+[node name="red_tree14" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -2213.29, -206.904 )
+
+[node name="red_tree15" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -378.296, -1813.05 )
+
+[node name="red_tree16" parent="YSort/unmovable_object" instance=ExtResource( 13 )]
+position = Vector2( -1275.36, -1918.88 )
+
 [node name="movable_object" type="YSort" parent="YSort"]
 
 [node name="movable_object" parent="YSort/movable_object" instance=ExtResource( 5 )]
-position = Vector2( 366.637, 143.631 )
+position = Vector2( 1614.22, 1675.04 )
 scale = Vector2( 2, 2 )
 
 [node name="movable_object2" parent="YSort/movable_object" instance=ExtResource( 5 )]
-position = Vector2( 218.814, 287.788 )
+position = Vector2( -2146.74, 449.525 )
+
+[node name="movable_object3" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( 1923.15, 806.619 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="movable_object4" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( 1906.75, 308.957 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="movable_object5" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( 927.788, 904.081 )
+
+[node name="movable_object6" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( -1931.47, 2148.57 )
+scale = Vector2( 2, 2 )
+
+[node name="movable_object7" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( -648.574, 2285.46 )
+
+[node name="movable_object8" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( -1401.2, -868.99 )
+
+[node name="movable_object9" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( -1591.91, 1177.38 )
+scale = Vector2( 2, 2 )
+
+[node name="movable_object10" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( -1076.62, 523.263 )
+
+[node name="movable_object11" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( 1077.56, -1470.45 )
+
+[node name="movable_object12" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( 612.724, -952.198 )
+
+[node name="movable_object13" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( 2142.99, -889.908 )
+scale = Vector2( 2, 2 )
+
+[node name="movable_object14" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( -2035.38, -1831.77 )
+scale = Vector2( 2, 2 )
+
+[node name="movable_object15" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( 786.616, -2227.54 )
+
+[node name="movable_object16" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( -1286.8, -2149.42 )
+
+[node name="movable_object17" parent="YSort/movable_object" instance=ExtResource( 5 )]
+position = Vector2( -569.961, -1331.86 )
 
 [node name="servPlayer" type="YSort" parent="YSort"]
 
 [node name="servPlayer2" parent="YSort/servPlayer" instance=ExtResource( 4 )]
-position = Vector2( -299.741, 59.4393 )
+position = Vector2( -272.023, -144.668 )
 scale = Vector2( 2, 2 )
 
 [node name="servPlayer3" parent="YSort/servPlayer" instance=ExtResource( 4 )]
-position = Vector2( 391.71, 42.7968 )
+position = Vector2( 256.898, 105.793 )
 scale = Vector2( 2, 2 )
 
 [node name="player" parent="YSort/servPlayer" instance=ExtResource( 1 )]
-position = Vector2( -168, 240 )
+position = Vector2( 2.42291, -3.40587 )
 scale = Vector2( 2, 2 )

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprite/red_tree.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 12.0104
+
+[node name="red_tree" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1, -8.5 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.5, 17.25 )
+shape = SubResource( 1 )
